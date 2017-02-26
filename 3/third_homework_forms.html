@@ -7,13 +7,13 @@
         <meta charset="utf-8">
 
           <link href="style.css" rel="stylesheet"></link>
-         <title>Третье испытание-таблицы</title>
+         <title>Третье испытание-формы</title>
     
      </head>
     
        <body>
        <h1>
-Третье задание-таблицы</h1>
+Третье задание-формы</h1>
 
       <h2 class="content">Содержание</h2>
          <ol>
@@ -23,7 +23,6 @@
            <li><a href="#id-label">Связка подписи и поля с помощью "id"</a></li>
            <li><a href="#pass-field">Поле для ввода пароля</a></li>
            <li><a href="#send">Отправка формы</a></li>
-           <li><a href="#checkbox">Чекбокс</a></li>
            <li><a href="#switch">Поле-переключатель</a></li>
            <li><a href="#select">Раскрывающийся список</a></li>
            <li><a href="#load-file">Поле для загрузки файлов</a></li>
@@ -57,9 +56,6 @@
          <p>Для того чтобы отправить форму, надо создать кнопку отправки. Она создается с помощью тега "input" со значением "submit".
             Надпись на конопке можно задать с помощью атрибута "value" у тега "input".</p>
 
-         <h2 id="checkbox">Чекбокс</h2>
-         <p></p>
-
          <h2 id="switch">Поле-переключатель</h2>
          <p>Переключатель создается с помощью тега "input" с типом "radio". Переключатели используют когда надо выбрать один вариант из списка.
             У переключателей из одной группы должны быть разные значения, но одно имя и значения задаются с помощью атрибута "value", который 
@@ -78,64 +74,125 @@
          <p>Скрытое поле используется, когда в форме нужно отправить какие-то дополнительные данные, которые не вводятся пользователем. Скрытое поле создается
             с помощью типа "hidden" тега "input".</p>
 
-         <h1>Профиль</h1>
+ <h1>Контактные данные</h1>
 
-       <form enctype="multipart/form-data" action="https://echo.htmlacademy.ru" method="post">
+    <form enctype="multipart/form-data" action="https://echo.htmlacademy.ru" method="post">
+<br>
             
-       Пол: <input type="radio" name="male" value="male"> Мужской
+     Ваш пол:<label>
+     Мужской<input checked type="radio" name="gender">
+     </label>
+     <label>
+     Женский<input type="radio" name="gender">
+     </label>
+</br>
+<br>
+     <label>
+     Номер телефона: <input type="tel" name="phone">
+     </label>
+</br>
+<br>
+     <label>
+     Ваш Email: <input type="email" name="mail">
+     </label>
+</br>
+<br>
+     <label>
+     Улица: <input type="text" name="street">
+     </label>
+</br>
+<br>
+     <label>
+     Дом: <input type="text" name="house">
+     </label>
+</br>
+<br>
+     <label>
+     Подъезд: <input type="text" name="done">
+     </label>
+</br> 
+<br>
+     <label>
+     Этаж: <input type="text" name="floor">
+     </label>
+</br> 
+<br>
+     <label>
+     Квартира: <input type="text" name="flat">
+     </label>
+</br>
+<br>     
             
-       <input checked type="radio" name="question-two" value="female"> Женский
-             
-        <br>
-            
-       Месяц и год рождения:
-            
-        </br>
-            
-       <select name="month">
-            
-       <option value="month">Январь</option>
+     Способ оплаты <select name="payment">            
+     <option value="cash">Наличными</option>
+                                 
+     <option value="ecard">Банковская карта</option>
 
-       <option value="month">Июль</option>
-       <option value="month">Апрель</option>
-       <option value="month">Октябрь</option>       
-        </select>
+     <option value="ewallet">Электронный кошелёк</option>     
+     </select>
+</br>
+<br>
+     <textarea id="comment-field" name="comment" rows="5">Ваш комментарий</textarea>
+</br>
+<br>           
+     <input type="submit" value="Отправить">
+
+</br>
+
+<h1>Выбор пиццы</h1>
+<br>
+     Кол-во<label>
+     <input type="text" name="number">
+     </label>
+</br>
+<br>
+     <label>
+     20см<input type="radio" name="number">
+     </label>
+     <label>
+     25см<input checked type="radio" name="number">
+     </label>
+     30см<label>
+     <input type="radio" name="number">
+     </label>
+</br>
+
+<h3>Ингредиенты для пиццы</h3>
+<br>     
             
-       <select name="year">
+   <p><input type="checkbox" name="ing" value="salad">Салат</p>
+   <p><input type="checkbox" name="ing" value="tomato">Помидоры</p>
+   <p><input type="checkbox" name="ing" value="onion">Лук</p>
+   <p><input type="checkbox" name="ing" value="sausage">Колбаса</p>
+   <p><input type="checkbox" name="ing" value="pepper">Перец</p>
+   <p><input type="checkbox" name="ing" value="mushrooms">Грибы</p>
+   <p><input type="checkbox" name="ing" value="masl">Маслины</p>
+</br>
+<h3>Выбор напитка</h3>
+<br>     
             
-       <option value="year">1990</option>
-       <option value="month">1993</option>
-       <option value="month">1995</option>
-       <option value="month">1997</option>
-            
-        </select>
-            
-        <br>
-            
-       Знакомые технологии:
-            
-        </br>
-            
-       <select multiple name="tech">
-            
-       <option value="html">HTML</option>
-            
-       <option value="css" selected>CSS</option>
-            
-       <option value="java">JavaScript</option>
-            
-       <option value="node">Node.js</option>
-            
-        </select>
-            
-        <br>
-            
-       Фото: <input type="file">
-            
-        </br>
-            
-       <input type="submit" value="Сохранить">
-        
-       </form>
+     Напиток <select name="drink">            
+     <option value="no">Без напитка</option>
+                                 
+     <option value="cola">Кола</option>
+
+     <option value="juice">Сок(в ассорт.)</option>
+     <option value="water">Вода</option>
+ 
+     <option value="gaswater">Газир. вода</option>
+     <option value="beer">Пиво(в ассорт.)</option>
+     <option value="wine">Вино(в ассорт.)</option>
+ 
+ 
+      
+     </select>
+</br>
+<br>
+<textarea id="comment-field" name="comment" rows="5">Ваш комментарий</textarea>
+</br>
+<br>           
+     <input type="submit" value="Отправить">
+
+</br>
   </body>
 </html>
